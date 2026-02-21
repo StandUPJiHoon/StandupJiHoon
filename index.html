@@ -57,17 +57,103 @@
         </section>
 
         <!-- Category Filter -->
-        <nav class="flex flex-wrap justify-center gap-3 mb-16">
-            <button onclick="filterBots('all', this)" class="filter-btn active px-6 py-3 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-sm transition-all shadow-sm">전체보기</button>
-            <button onclick="filterBots('math', this)" class="filter-btn px-6 py-3 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-sm transition-all shadow-sm">수학 웹앱</button>
-            <button onclick="filterBots('record', this)" class="filter-btn px-6 py-3 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-sm transition-all shadow-sm">행발/기록</button>
-            <button onclick="filterBots('eval', this)" class="filter-btn px-6 py-3 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-sm transition-all shadow-sm">교과평어</button>
-            <button onclick="filterBots('admin', this)" class="filter-btn px-6 py-3 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-sm transition-all shadow-sm">학급경영/소통</button>
+        <nav class="flex flex-wrap justify-center gap-2 mb-16">
+            <button onclick="filterBots('all', this)" class="filter-btn active px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-xs md:text-sm transition-all shadow-sm">전체보기</button>
+            <button onclick="filterBots('it_edu', this)" class="filter-btn px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-xs md:text-sm transition-all shadow-sm">정보교육</button>
+            <button onclick="filterBots('teacher_train', this)" class="filter-btn px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-xs md:text-sm transition-all shadow-sm">교사 연수</button>
+            <button onclick="filterBots('lesson_design', this)" class="filter-btn px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-xs md:text-sm transition-all shadow-sm">수업설계</button>
+            <button onclick="filterBots('edutech_intro', this)" class="filter-btn px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-xs md:text-sm transition-all shadow-sm">에듀테크 활용</button>
+            <button onclick="filterBots('math', this)" class="filter-btn px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-xs md:text-sm transition-all shadow-sm">수학 웹앱</button>
+            <button onclick="filterBots('record', this)" class="filter-btn px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-xs md:text-sm transition-all shadow-sm">행발/기록</button>
+            <button onclick="filterBots('eval', this)" class="filter-btn px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-xs md:text-sm transition-all shadow-sm">교과평어</button>
+            <button onclick="filterBots('admin', this)" class="filter-btn px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-xs md:text-sm transition-all shadow-sm">학급경영/소통</button>
         </nav>
 
         <!-- Chatbot Grid -->
         <div id="chatbot-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             
+            <!-- [정보교육] -->
+            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="it_edu">
+                <div class="p-8 flex-grow">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-keyboard text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">타자왕 만들기! (타자교육)</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">타자가 익숙하지 않은 우리 아이들을 위한 효율적인 타자 연습 방법을 안내합니다.</p>
+                </div>
+                <a href="https://youtu.be/XYPP3dwJtcY?si=SoGS9wRh9hav7iXf" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-red-600 text-white font-bold rounded-2xl transition-all">영상 보기</a>
+            </div>
+
+            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="it_edu">
+                <div class="p-8 flex-grow">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-medal text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">'타자왕 선발전' 프로젝트</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">아이들의 흥미를 자극하는 타자왕 선발전 운영 노하우를 소개합니다.</p>
+                </div>
+                <a href="https://youtu.be/Eo978xY0AXQ?si=P7gO_JaXsz_65S9G" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-red-600 text-white font-bold rounded-2xl transition-all">영상 보기</a>
+            </div>
+
+            <!-- [교사 연수] -->
+            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="teacher_train">
+                <div class="p-8 flex-grow">
+                    <div class="w-12 h-12 bg-slate-100 text-slate-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-colors">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">노션(Notion) 알아보기</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">교사 업무 혁신을 위한 노션 기초부터 심화까지의 연수 영상입니다.</p>
+                </div>
+                <a href="https://youtube.com/playlist?list=PLD5GCO0w5XEvOWHPa4nSEbrpSx-QY6QYX&si=criT3QK8S7WyOXHq" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-black text-white font-bold rounded-2xl transition-all">연수 목록 보기</a>
+            </div>
+
+            <!-- [수업설계] -->
+            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="lesson_design">
+                <div class="p-8 flex-grow">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-magic text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">수업 과정안 자동생성기</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">주제 입력만으로 체계적인 수업 과정안을 자동으로 설계해 주는 AI 도구입니다.</p>
+                </div>
+                <a href="https://chatgpt.com/g/g-68c90010e924819198c97c68cd8b56aa-sueob-gwajeongan-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-emerald-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
+            </div>
+
+            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="lesson_design">
+                <div class="p-8 flex-grow">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-video text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">과정안 자동생성기 사용법</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">과정안 자동생성기 AI 챗봇을 제대로 활용하는 가이드 영상입니다.</p>
+                </div>
+                <a href="https://youtu.be/inwOZRDxw4Q" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-red-600 text-white font-bold rounded-2xl transition-all">영상 보기</a>
+            </div>
+
+            <!-- [에듀테크 활용] -->
+            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="edutech_intro">
+                <div class="p-8 flex-grow">
+                    <div class="w-12 h-12 bg-violet-50 text-violet-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-user-plus text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">엔트리 학생계정 한방에 만들기</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">SW 교육의 필수, 엔트리 학생 계정을 쉽고 빠르게 생성하는 방법입니다.</p>
+                </div>
+                <a href="https://youtu.be/oMFNU7O_SRs?si=UxPmmi1xBQylMPLK" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-red-600 text-white font-bold rounded-2xl transition-all">영상 보기</a>
+            </div>
+
+            <!-- [학급경영/소통] - 학급 로고 추가 -->
+            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="admin">
+                <div class="p-8 flex-grow">
+                    <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-paint-brush text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">우리반 학급 로고 생성기</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">우리 학급의 아이덴티티를 담은 멋진 로고를 AI로 즉시 제작합니다.</p>
+                </div>
+                <a href="https://chatgpt.com/g/g-677caf4a772881918ca51aa096a98365-uriban-rogo-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
+            </div>
+
             <!-- [수학 웹앱] -->
             <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="math">
                 <div class="p-8 flex-grow">
@@ -75,7 +161,7 @@
                         <i class="fas fa-rabbit text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3"><span class="text-amber-600 text-sm block mb-1">[4학년-분수의 덧셈과 뺄셈]</span>토끼 분수 덧셈 점프 게임</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">토끼가 분수 덧셈식의 결과만큼 점프하며 이동 거리를 확인하는 게임형 학습 도구입니다.</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">토끼가 분수 결과만큼 점프하며 이동 거리를 확인하는 게임입니다.</p>
                 </div>
                 <a href="https://standupjihoon.github.io/fractionjump/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-amber-600 text-white font-bold rounded-2xl transition-all">앱 열기</a>
             </div>
@@ -86,7 +172,7 @@
                         <i class="fas fa-store text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3"><span class="text-amber-600 text-sm block mb-1">[4학년-분수의 덧셈과 뺄셈]</span>분수 교환 상점</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">변환 과정을 통해 '받아내림이 있는 대분수 뺄셈'을 직관적으로 익힐 수 있도록 제작했습니다.</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">대분수를 가분수로 바꾸는 과정을 시각적으로 체험하는 상점 컨셉 앱입니다.</p>
                 </div>
                 <a href="https://standupjihoon.github.io/fractionexchangshop/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-amber-600 text-white font-bold rounded-2xl transition-all">앱 열기</a>
             </div>
@@ -97,7 +183,7 @@
                         <i class="fas fa-utensils text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3"><span class="text-amber-600 text-sm block mb-1">[4학년-분수의 덧셈과 뺄셈]</span>분수 급식 요리사 1</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">친숙한 급식 상황을 활용하여 분수 개념을 재미있게 동기유발 할 수 있는 웹앱입니다.</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">급식 배식 상황을 통해 분수 개념을 익히는 학습 동기유발용 앱입니다.</p>
                 </div>
                 <a href="https://standupjihoon.github.io/bgyrs1/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-amber-600 text-white font-bold rounded-2xl transition-all">앱 열기</a>
             </div>
@@ -108,7 +194,7 @@
                         <i class="fas fa-apple-alt text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3"><span class="text-amber-600 text-sm block mb-1">[4학년-분수의 덧셈과 뺄셈]</span>분수 급식 요리사 2</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">급식 메뉴 속 영양소를 분수로 나타내고 일일 권장량을 채우는 수학-영양 통합 학습 앱입니다.</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">영양소와 분수 합산을 결합한 수학-영양 통합 교육용 앱입니다.</p>
                 </div>
                 <a href="https://standupjihoon.github.io/bgyrs2/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-amber-600 text-white font-bold rounded-2xl transition-all">앱 열기</a>
             </div>
@@ -117,23 +203,12 @@
             <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="record">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-edit text-xl"></i>
+                        <i class="fas fa-user-edit text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">관찰문장만 입력하는 행발 종합의견 생성기</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">관찰한 일화를 바탕으로 정교한 나이스 행발 문장을 구성합니다.</p>
+                    <h3 class="text-xl font-bold mb-3">관찰문장 행발 종합의견 생성기</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">관찰된 일화를 바탕으로 나이스 행발 문장을 구성합니다.</p>
                 </div>
                 <a href="https://chatgpt.com/g/g-69709917510c81919f9a645173285c2e-haengdongbaldalteugseong-jonghabyigyeon-jadong-jeongrigi-gwancalmunjang-giban" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all">실행하기</a>
-            </div>
-
-            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="record">
-                <div class="p-8 flex-grow">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-tags text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">키워드만 입력하는 행발 종합의견 생성기</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">핵심 단어만으로 학생의 특성이 잘 드러나는 종합의견을 생성합니다.</p>
-                </div>
-                <a href="https://chatgpt.com/g/g-69705973300c8191b983fa71c031819e-haengdongteugseong-mic-jonghabyigyeon-saengseonggi-kiweodeu-ibryeoghyeong" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all">실행하기</a>
             </div>
 
             <!-- [교과평어] -->
@@ -142,78 +217,22 @@
                     <div class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
                         <i class="fas fa-check-double text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">성취기준만 입력하는 교과평어 생성기</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">성취기준을 분석하여 수준별(상중하) 평어 예시를 제공합니다.</p>
+                    <h3 class="text-xl font-bold mb-3">성취기준 교과평어 생성기</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">성취기준을 분석하여 수준별 평어 예시를 제공합니다.</p>
                 </div>
                 <a href="https://chatgpt.com/g/g-6970b10d52708191aeaba6c76cb9e337-seongcwigijunman-ibryeoghaneun-gyogwapyeongeo-saengseong" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-green-600 text-white font-bold rounded-2xl transition-all">실행하기</a>
             </div>
 
-            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="eval">
-                <div class="p-8 flex-grow">
-                    <div class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-book-open text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">단원명만 입력하는 교과평어 생성기</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">교과 단원명에 최적화된 학습 결과 평어를 생성합니다.</p>
-                </div>
-                <a href="https://chatgpt.com/g/g-69709fc2979881918f6483f531ca4bc6-danweonmyeongman-ibryeoghaneun-gyogwa-pyeongeo-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-green-600 text-white font-bold rounded-2xl transition-all">실행하기</a>
-            </div>
-
-            <!-- [행발/기록 추가] -->
-            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="record">
-                <div class="p-8 flex-grow">
-                    <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-layer-group text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">창체 활동명 기반 나이스 평가문항 생성기</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">자율, 동아리, 봉사, 진로 활동에 대한 평가 문장을 생성합니다.</p>
-                </div>
-                <a href="https://chatgpt.com/g/g-6970cd69448c81919006fb8b1f842c4b-cangce-ja-dong-bong-jin-moduganeung-hwaldongmyeongman-ibryeoghaneun-cangce-naiseu-pyeonggamunhang-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-purple-600 text-white font-bold rounded-2xl transition-all">실행하기</a>
-            </div>
-
-            <!-- [학급경영/소통] -->
+            <!-- [학급경영/소통] - 기존 도구들 -->
             <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="admin">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-heart text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">따뜻한 학부모 문자 답장기</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">공감과 신뢰를 담은 학부모 상담 답장 예시를 추천합니다.</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">신뢰와 공감을 담은 학부모님 상담 답장 예시 도구입니다.</p>
                 </div>
                 <a href="https://chatgpt.com/g/g-6970bbfd6d348191985004156c88a57d-ddaddeushan-hagbumo-munja-dabjang-yesi-saengseong" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">실행하기</a>
-            </div>
-
-            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="admin">
-                <div class="p-8 flex-grow">
-                    <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-file-alt text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">가정통신문 생성기</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">내용만 입력하면 공식적인 가정통신문 문체로 변환해 드립니다.</p>
-                </div>
-                <a href="https://chatgpt.com/g/g-6970c65988c88191b53207d59620a2c4-gajeongtongsinmun-jadong-jagseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-orange-600 text-white font-bold rounded-2xl transition-all">실행하기</a>
-            </div>
-
-            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="admin">
-                <div class="p-8 flex-grow">
-                    <div class="w-12 h-12 bg-yellow-50 text-yellow-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-gavel text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">우리반 법전 생성기</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">학급 규칙을 법전 형식으로 재미있고 의미 있게 구성합니다.</p>
-                </div>
-                <a href="https://chatgpt.com/g/g-6970c0804c8c8191ad3a7777fcf587ef-uriban-beobjeon-saengseonggi-teugbyeolhan-haggeub-gyucig-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-yellow-600 text-white font-bold rounded-2xl transition-all">실행하기</a>
-            </div>
-
-            <div class="chatbot-card visible-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden flex-col h-full" data-category="admin">
-                <div class="p-8 flex-grow">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-comments text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">나이스 상담실적 생성기</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">실제 상담 내용을 나이스 입력용 요약문으로 변환합니다.</p>
-                </div>
-                <a href="https://chatgpt.com/g/g-6970d06abaec8191a6720da15580d073-naiseu-sangdamsiljeog-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all">실행하기</a>
             </div>
 
         </div>
