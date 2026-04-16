@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
-
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
         .chatbot-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; }
@@ -24,19 +19,6 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* 조회수 배지 스타일 */
-        .view-badge {
-            font-size: 10px;
-            padding: 2px 8px;
-            background: #f1f5f9;
-            color: #64748b;
-            border-radius: 999px;
-            border: 1px solid #e2e8f0;
-            margin-left: 8px;
-            display: inline-flex;
-            align-items: center;
         }
     </style>
 </head>
@@ -52,9 +34,6 @@
                 <div>
                     <div class="flex items-center">
                         <h1 class="text-xl font-extrabold text-slate-800 tracking-tight">스탠드업교실</h1>
-                        <span id="view-count-display" class="view-badge">
-                            <i class="fas fa-eye mr-1"></i> <span id="view-number">...</span>
-                        </span>
                     </div>
                     <p class="text-[12px] text-blue-600 font-bold uppercase tracking-widest leading-none mt-1">교사 서지훈</p>
                 </div>
@@ -441,7 +420,6 @@
                 <a href="https://www.youtube.com/@StandUpClass/featured" target="_blank" class="flex items-center hover:text-red-400 transition-colors bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700"><i class="fab fa-youtube mr-2 text-red-500"></i> 유튜브: 스탠드업교실</a>
             </div>
             
-            <!-- 문의 이메일 추가 -->
             <div class="mb-12">
                 <a href="mailto:tjwlgns26@gmail.com" class="text-sm hover:text-blue-400 transition-colors bg-slate-800/30 px-4 py-2 rounded-full border border-slate-700/50">
                     <i class="fas fa-envelope mr-2"></i> 문의: tjwlgns26@gmail.com
@@ -471,58 +449,6 @@
                 }
             });
         }
-
-        // --- 조회수 기능 (Firebase Firestore) ---
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'standup-classroom-ai';
-        const firebaseConfig = JSON.parse(__firebase_config);
-        
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-        const auth = firebase.auth();
-
-        async function initViewCounter() {
-            try {
-                // 1. 익명 로그인 (데이터 보안 및 쓰기 권한을 위함)
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await auth.signInWithCustomToken(__initial_auth_token);
-                } else {
-                    await auth.signInAnonymously();
-                }
-
-                // 2. 조회수 문서 경로 (Public Data Rule 준수)
-                const counterDoc = db.doc(`artifacts/${appId}/public/data/stats/views`);
-
-                // 3. 실시간 리스너 설정 (모든 사용자가 보는 수치가 같도록)
-                counterDoc.onSnapshot((doc) => {
-                    if (doc.exists) {
-                        const data = doc.data();
-                        document.getElementById('view-number').innerText = data.count.toLocaleString();
-                    } else {
-                        // 문서가 없으면 초기화
-                        counterDoc.set({ count: 0 });
-                    }
-                }, (err) => console.error("Firestore Listen Error:", err));
-
-                // 4. 조회수 증가 (세션당 한 번만 증가시켜서 조금 더 정확한 사람 수 반영)
-                if (!sessionStorage.getItem('page_viewed')) {
-                    await db.runTransaction(async (transaction) => {
-                        const sfDoc = await transaction.get(counterDoc);
-                        if (!sfDoc.exists) {
-                            transaction.set(counterDoc, { count: 1 });
-                        } else {
-                            const newCount = (sfDoc.data().count || 0) + 1;
-                            transaction.update(counterDoc, { count: newCount });
-                        }
-                    });
-                    sessionStorage.setItem('page_viewed', 'true');
-                }
-            } catch (error) {
-                console.error("View counter init failed:", error);
-                document.getElementById('view-count-display').style.display = 'none';
-            }
-        }
-
-        window.onload = initViewCounter;
     </script>
 
 </body>
