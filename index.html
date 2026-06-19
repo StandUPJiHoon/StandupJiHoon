@@ -534,20 +534,26 @@
                 updateBadge('--', '--');
                 return;
             }
+
+            const today = new Date().toISOString().slice(0, 10); // 'YYYY-MM-DD'
+            const storageKey = 'visited_' + today;
+            const alreadyVisited = localStorage.getItem(storageKey);
+
             try {
-                // 방문 카운트 증가
-                const res = await fetch(COUNTER_API_URL + '?action=increment');
-                const data = await res.json();
-                updateBadge(data.today, data.total);
-            } catch (e) {
-                // 실패 시 조회만 시도
-                try {
+                if (alreadyVisited) {
+                    // 오늘 이미 방문한 경우 → 카운트 올리지 않고 조회만
                     const res = await fetch(COUNTER_API_URL + '?action=get');
                     const data = await res.json();
                     updateBadge(data.today, data.total);
-                } catch (e2) {
-                    updateBadge('?', '?');
+                } else {
+                    // 오늘 첫 방문 → 카운트 증가 + 로컬에 기록
+                    const res = await fetch(COUNTER_API_URL + '?action=increment');
+                    const data = await res.json();
+                    localStorage.setItem(storageKey, '1');
+                    updateBadge(data.today, data.total);
                 }
+            } catch (e) {
+                updateBadge('?', '?');
             }
         }
 
