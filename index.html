@@ -80,11 +80,23 @@
             <button onclick="filterBots('teacher_train', this)" class="filter-btn px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-600 font-bold text-xs md:text-sm transition-all shadow-sm">교사 연수</button>
         </nav>
 
-        <!-- Chatbot Grid (최근에 추가된 도구 순서대로 정렬) -->
+        <!-- Chatbot Grid -->
         <div id="chatbot-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            
-            <!-- 1. 아스파라거스 색소 가상 실험실 (최신 추가) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="science" data-recent-index="1">
+
+            <!-- 1. 수학스타즈 슈팅 게임 (최신 추가) -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="1">
+                <div class="p-8 flex-grow">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-star text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3"><span class="text-amber-600 text-sm block mb-1">[5학년-약수와 배수]</span>수학스타즈 슈팅 게임</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">약수와 배수 개념을 슈팅 게임으로 신나게 익히는 수학 웹앱입니다.</p>
+                </div>
+                <a href="https://neon-medovik-9eba10.netlify.app/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-amber-600 text-white font-bold rounded-2xl transition-all">앱 열기</a>
+            </div>
+
+            <!-- 2. 아스파라거스 색소 가상 실험실 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="science" data-recent-index="2">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                         <i class="fas fa-flask text-xl"></i>
@@ -95,8 +107,8 @@
                 <a href="https://standupjihoon.github.io/aseupalageoseu/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-teal-600 text-white font-bold rounded-2xl transition-all">실험 시작하기</a>
             </div>
 
-                        <!-- 2. 발표자 랜덤뽑기 -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="2">
+            <!-- 3. 발표자 랜덤뽑기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="3">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-hand-pointer text-xl"></i>
@@ -107,8 +119,8 @@
                 <a href="https://script.google.com/macros/s/AKfycbzbk_lk3I75Upwpb3gQX5KK20ZUrTaUxhCZKu17z55GIpsKnpbmd2X_PhluqiPXZOKoRQ/exec" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 열기</a>
             </div>
 
-                        <!-- 2. 빙고 게임 도우미 -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="3">
+            <!-- 4. 빙고 게임 도우미 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="4">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-gamepad text-xl"></i>
@@ -119,8 +131,8 @@
                 <a href="https://script.google.com/macros/s/AKfycbyuEZyOGTQo4sCQpSBGf2h_PtMrYbq2xswKQguZXRNBVSA3onJQUm9pg1OsT_duc5a0sw/exec" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 열기</a>
             </div>
 
-            <!-- 2. 스마트 자리 배치 (최신 추가) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="4">
+            <!-- 5. 스마트 자리 배치 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="5">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-th text-xl"></i>
@@ -131,8 +143,8 @@
                 <a href="https://standupjihoon.github.io/switchnigseats/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 열기</a>
             </div>
 
-            <!-- 3. 폴짝폴짝! 토끼 소수 공부하기! (수학 웹앱, 최신 추가) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="5">
+            <!-- 6. 폴짝폴짝! 토끼 소수 공부하기! -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="6">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                         <i class="fas fa-rabbit text-xl"></i>
@@ -143,8 +155,8 @@
                 <a href="https://script.google.com/macros/s/AKfycbx1zEFfSwa_RJ1kVd0sx_8K2Z4LwE1uvuVQYv5HnXj8_IsHLCH6kklSAAHc02Z7lLPXzQ/exec" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-amber-600 text-white font-bold rounded-2xl transition-all">앱 열기</a>
             </div>
 
-            <!-- 4. 분수 급식 요리사 2 (수학 웹앱) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="6">
+            <!-- 7. 분수 급식 요리사 2 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="7">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                         <i class="fas fa-apple-alt text-xl"></i>
@@ -155,8 +167,8 @@
                 <a href="https://standupjihoon.github.io/bgyrs2/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-amber-600 text-white font-bold rounded-2xl transition-all">앱 열기</a>
             </div>
 
-            <!-- 4. 분수 급식 요리사 1 (수학 웹앱) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="7">
+            <!-- 8. 분수 급식 요리사 1 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="8">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                         <i class="fas fa-utensils text-xl"></i>
@@ -167,8 +179,8 @@
                 <a href="https://standupjihoon.github.io/bgyrs1/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-amber-600 text-white font-bold rounded-2xl transition-all">앱 열기</a>
             </div>
 
-            <!-- 5. 분수 교환 상점 (수학 웹앱) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="8">
+            <!-- 9. 분수 교환 상점 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="9">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                         <i class="fas fa-exchange-alt text-xl"></i>
@@ -179,8 +191,8 @@
                 <a href="https://standupjihoon.github.io/fractionexchangshop/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-amber-600 text-white font-bold rounded-2xl transition-all">앱 열기</a>
             </div>
 
-            <!-- 6. 토끼 분수 덧셈 점프 게임 (수학 웹앱) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="9">
+            <!-- 10. 토끼 분수 덧셈 점프 게임 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="math" data-recent-index="10">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                         <i class="fas fa-rabbit text-xl"></i>
@@ -191,8 +203,8 @@
                 <a href="https://standupjihoon.github.io/fractionjump/" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-amber-600 text-white font-bold rounded-2xl transition-all">앱 열기</a>
             </div>
 
-            <!-- 7. 엔트리 학생계정 한방에 만들기 (에듀테크 활용) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="edutech_intro" data-recent-index="10">
+            <!-- 11. 엔트리 학생계정 한방에 만들기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="edutech_intro" data-recent-index="11">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-violet-50 text-violet-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-violet-600 group-hover:text-white transition-colors">
                         <i class="fas fa-user-plus text-xl"></i>
@@ -203,8 +215,8 @@
                 <a href="https://youtu.be/oMFNU7O_SRs?si=UxPmmi1xBQylMPLK" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-red-600 text-white font-bold rounded-2xl transition-all">영상 보기</a>
             </div>
 
-            <!-- 8. 노션 알아보기 (교사 연수) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="teacher_train" data-recent-index="11">
+            <!-- 12. 노션 알아보기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="teacher_train" data-recent-index="12">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-slate-100 text-slate-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-colors">
                         <i class="fas fa-graduation-cap text-xl"></i>
@@ -215,8 +227,8 @@
                 <a href="https://youtube.com/playlist?list=PLD5GCO0w5XEvOWHPa4nSEbrpSx-QY6QYX&si=criT3QK8S7WyOXHq" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-black text-white font-bold rounded-2xl transition-all">연수 목록 보기</a>
             </div>
 
-            <!-- 9. 과정안 자동생성기 사용법 (수업설계) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="lesson_design" data-recent-index="12">
+            <!-- 13. 과정안 자동생성기 사용법 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="lesson_design" data-recent-index="13">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                         <i class="fas fa-video text-xl"></i>
@@ -227,8 +239,8 @@
                 <a href="https://youtu.be/inwOZRDxw4Q" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-emerald-600 text-white font-bold rounded-2xl transition-all">영상 보기</a>
             </div>
 
-            <!-- 10. 과정안 자동생성기 (수업설계) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="lesson_design" data-recent-index="13">
+            <!-- 14. 과정안 자동생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="lesson_design" data-recent-index="14">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                         <i class="fas fa-magic text-xl"></i>
@@ -239,8 +251,8 @@
                 <a href="https://chatgpt.com/g/g-68c90010e924819198c97c68cd8b56aa-sueob-gwajeongan-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-emerald-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 11. 타자교육] 아이들이 너무나도 좋아했던 '타자왕 선발전' (정보교육) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="it_edu" data-recent-index="14">
+            <!-- 15. 타자왕 선발전 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="it_edu" data-recent-index="15">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                         <i class="fas fa-medal text-xl"></i>
@@ -251,8 +263,8 @@
                 <a href="https://youtu.be/Eo978xY0AXQ?si=P7gO_JaXsz_65S9G" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-red-600 text-white font-bold rounded-2xl transition-all">영상 보기</a>
             </div>
 
-            <!-- 12. (타자교육) 타자가 익숙하지 않은 우리 아이들! 타자왕 만들기! (정보교육) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="it_edu" data-recent-index="15">
+            <!-- 16. 타자왕 만들기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="it_edu" data-recent-index="16">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                         <i class="fas fa-keyboard text-xl"></i>
@@ -263,8 +275,8 @@
                 <a href="https://youtu.be/XYPP3dwJtcY?si=SoGS9wRh9hav7iXf" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-red-600 text-white font-bold rounded-2xl transition-all">영상 보기</a>
             </div>
 
-            <!-- 13. 우리반 학급 로고 생성기 (학급경영/소통) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="16">
+            <!-- 17. 우리반 학급 로고 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="17">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-palette text-xl"></i>
@@ -275,8 +287,8 @@
                 <a href="https://chatgpt.com/g/g-677caf4a772881918ca51aa096a98365-uriban-rogo-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 14. 기초학력지도계획 생성기 (학급경영/소통) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="17">
+            <!-- 18. 기초학력지도계획 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="18">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-graduation-cap text-xl"></i>
@@ -287,8 +299,8 @@
                 <a href="https://chatgpt.com/g/g-6970bde92efc81919ce0b3b7aab56e85-gicohagryeogjido-gyehoegseo-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 15. 동아리 게획 세우기 (학급경영/소통) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="18">
+            <!-- 19. 동아리 계획 세우기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="19">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-users-cog text-xl"></i>
@@ -299,8 +311,8 @@
                 <a href="https://chatgpt.com/g/g-6970c56492ac8191bfb8476249d7b5cb-dongari-jido-gyehoeg-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 16. 나이스 상담실적 생성기 (학급경영/소통) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="19">
+            <!-- 20. 나이스 상담실적 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="20">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-comments text-xl"></i>
@@ -311,8 +323,8 @@
                 <a href="https://chatgpt.com/g/g-6970d06abaec8191a6720da15580d073-naiseu-sangdamsiljeog-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 17. 법전 생성기 (학급경영/소통) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="20">
+            <!-- 21. 법전 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="21">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-gavel text-xl"></i>
@@ -323,8 +335,8 @@
                 <a href="https://chatgpt.com/g/g-6970c0804c8c8191ad3a7777fcf587ef-uriban-beobjeon-saengseonggi-teugbyeolhan-haggeub-gyucig-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 18. 다문화 가정통신문 생성기 (학급경영/소통) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="21">
+            <!-- 22. 다문화 가정통신문 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="22">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-globe-asia text-xl"></i>
@@ -335,8 +347,8 @@
                 <a href="https://chatgpt.com/g/g-6970ca6a8bec8191b8b81e7d424a79a6-damunhwa-gajeongtongsinmun-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 19. 가정통신문 생성기 (학급경영/소통) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="22">
+            <!-- 23. 가정통신문 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="23">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-envelope-open-text text-xl"></i>
@@ -347,8 +359,8 @@
                 <a href="https://chatgpt.com/g/g-6970c65988c88191b53207d59620a2c4-gajeongtongsinmun-jadong-jagseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 20. 따뜻한 학부모 문자 답장기 (학급경영/소통) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="23">
+            <!-- 24. 따뜻한 학부모 문자 답장기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="admin" data-recent-index="24">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                         <i class="fas fa-heart text-xl"></i>
@@ -359,8 +371,8 @@
                 <a href="https://chatgpt.com/g/g-6970bbfd6d348191985004156c88a57d-ddaddeushan-hagbumo-munja-dabjang-yesi-saengseong" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-pink-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 21. 성취기준, 평가방법을 입력하는 교과평어 생성기 (교과평어) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="eval" data-recent-index="24">
+            <!-- 25. 성취기준, 평가방법을 입력하는 교과평어 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="eval" data-recent-index="25">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
                         <i class="fas fa-list-ol text-xl"></i>
@@ -371,8 +383,8 @@
                 <a href="https://chatgpt.com/g/g-69672cf5357c8191b247480597598434-gyogwa-pyeongeo-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-green-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 22. 수행평가만 입력하는 교과평어 생성기 (교과평어) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="eval" data-recent-index="25">
+            <!-- 26. 수행평가만 입력하는 교과평어 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="eval" data-recent-index="26">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
                         <i class="fas fa-file-signature text-xl"></i>
@@ -383,8 +395,8 @@
                 <a href="https://chatgpt.com/g/g-6970a47127b48191b1939c3079322a46-suhaengpyeonggaman-ibryeoghaneun-gyogwapyeongeo-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-green-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 23. 단원명만 입력하는 교과평어 생성기 (교과평어) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="eval" data-recent-index="26">
+            <!-- 27. 단원명만 입력하는 교과평어 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="eval" data-recent-index="27">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
                         <i class="fas fa-book-open text-xl"></i>
@@ -395,8 +407,8 @@
                 <a href="https://chatgpt.com/g/g-69709fc2979881918f6483f531ca4bc6-danweonmyeongman-ibryeoghaneun-gyogwa-pyeongeo-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-green-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 24. 성취기준만 입력하는 교과평어 생성기 (교과평어) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="eval" data-recent-index="27">
+            <!-- 28. 성취기준만 입력하는 교과평어 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="eval" data-recent-index="28">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
                         <i class="fas fa-bullseye text-xl"></i>
@@ -407,8 +419,8 @@
                 <a href="https://chatgpt.com/g/g-6970b10d52708191aeaba6c76cb9e337-seongcwigijunman-ibryeoghaneun-gyogwapyeongeo-saengseong" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-green-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 25. 비슷한 문장 생성기 (행발/기록) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="28">
+            <!-- 29. 비슷한 문장 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="29">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fas fa-copy text-xl"></i>
@@ -419,8 +431,8 @@
                 <a href="https://chatgpt.com/g/g-6970c38397e0819187afb861b54225c7-biseushan-munjang-saengseong" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 26. 누가기록 생성기 (행발/기록) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="29">
+            <!-- 30. 누가기록 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="30">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fas fa-calendar-alt text-xl"></i>
@@ -431,8 +443,8 @@
                 <a href="https://chatgpt.com/g/g-6970b9287d488191be18d3dea494f126-nugagirog-jadong-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 27. [창체:자,동,봉,진 모두가능] 활동명만 입력하는 창체 나이스 평가문항 생성기! (행발/기록) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="30">
+            <!-- 31. 창체 나이스 평가문항 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="31">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fas fa-list-check text-xl"></i>
@@ -443,8 +455,8 @@
                 <a href="https://chatgpt.com/g/g-6970cd69448c81919006fb8b1f842c4b-cangce-ja-dong-bong-jin-moduganeung-hwaldongmyeongman-ibryeoghaneun-cangce-naiseu-pyeonggamunhang-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 28. 나이스 스포츠클럽활동 내역 생성기 (행발/기록) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="31">
+            <!-- 32. 나이스 스포츠클럽활동 내역 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="32">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fas fa-running text-xl"></i>
@@ -455,8 +467,8 @@
                 <a href="https://chatgpt.com/g/g-6970d407f67c8191873c478fad822b6b-naiseu-seupoceukeulreob-hwaldong-naeyeog-saengseonggi" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 29. 키워드만 입력하는 행발 종합의견 생성기 (행발/기록) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="32">
+            <!-- 33. 키워드만 입력하는 행발 종합의견 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="33">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fas fa-key text-xl"></i>
@@ -467,8 +479,8 @@
                 <a href="https://chatgpt.com/g/g-69705973300c8191b983fa71c031819e-haengdongteugseong-mic-jonghabyigyeon-saengseonggi-kiweodeu-ibryeoghyeong" target="_blank" class="m-6 mt-0 py-4 text-center bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all">도구 실행하기</a>
             </div>
 
-            <!-- 30. 관찰문장만 입력하는 행발 종합의견 생성기 (행발/기록 - 최초 제작 도구) -->
-            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="33">
+            <!-- 34. 관찰문장만 입력하는 행발 종합의견 생성기 -->
+            <div class="chatbot-card group bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden h-full" data-category="record" data-recent-index="34">
                 <div class="p-8 flex-grow">
                     <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fas fa-user-edit text-xl"></i>
@@ -511,7 +523,6 @@
 
     <!-- 방문자 카운터 스크립트 -->
     <script>
-        // ↓ Apps Script 배포 후 여기에 URL 붙여넣기
         const COUNTER_API_URL = 'https://script.google.com/macros/s/AKfycbw-qxFmln6OMKinWUTNXrQDajOphfSLA76rifLv4G-qwymWY5Q3TYH3zXsKISRKjOwZ/exec';
 
         function formatNumber(n) {
@@ -519,10 +530,10 @@
         }
 
         function updateBadge(today, total) {
-            const todayEl   = document.getElementById('today-count');
-            const totalEl   = document.getElementById('total-count');
-            const fTodayEl  = document.getElementById('footer-today');
-            const fTotalEl  = document.getElementById('footer-total');
+            const todayEl  = document.getElementById('today-count');
+            const totalEl  = document.getElementById('total-count');
+            const fTodayEl = document.getElementById('footer-today');
+            const fTotalEl = document.getElementById('footer-total');
             if (todayEl)  todayEl.textContent  = formatNumber(today);
             if (totalEl)  totalEl.textContent  = formatNumber(total);
             if (fTodayEl) fTodayEl.textContent = formatNumber(today);
@@ -530,23 +541,16 @@
         }
 
         async function initVisitorCounter() {
-            if (!COUNTER_API_URL || COUNTER_API_URL === 'YOUR_APPS_SCRIPT_WEB_APP_URL') {
-                updateBadge('--', '--');
-                return;
-            }
-
-            const today = new Date().toISOString().slice(0, 10); // 'YYYY-MM-DD'
+            const today = new Date().toISOString().slice(0, 10);
             const storageKey = 'visited_' + today;
             const alreadyVisited = localStorage.getItem(storageKey);
 
             try {
                 if (alreadyVisited) {
-                    // 오늘 이미 방문한 경우 → 카운트 올리지 않고 조회만
                     const res = await fetch(COUNTER_API_URL + '?action=get');
                     const data = await res.json();
                     updateBadge(data.today, data.total);
                 } else {
-                    // 오늘 첫 방문 → 카운트 증가 + 로컬에 기록
                     const res = await fetch(COUNTER_API_URL + '?action=increment');
                     const data = await res.json();
                     localStorage.setItem(storageKey, '1');
@@ -557,17 +561,13 @@
             }
         }
 
-        // 페이지 로드 시 실행
         window.addEventListener('DOMContentLoaded', initVisitorCounter);
     </script>
 
     <!-- Javascript Filter & Reorder Logic -->
     <script>
         function filterBots(category, btn) {
-            document.querySelectorAll('.filter-btn').forEach(b => {
-                b.classList.remove('active');
-            });
-            
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
             const grid = document.getElementById('chatbot-grid');
@@ -580,15 +580,11 @@
                 if (category === 'record') {
                     const priorityA = getRecordPriority(a);
                     const priorityB = getRecordPriority(b);
-                    if (priorityA !== priorityB) {
-                        return priorityA - priorityB;
-                    }
+                    if (priorityA !== priorityB) return priorityA - priorityB;
                 } else if (category === 'eval') {
                     const priorityA = getEvalPriority(a);
                     const priorityB = getEvalPriority(b);
-                    if (priorityA !== priorityB) {
-                        return priorityA - priorityB;
-                    }
+                    if (priorityA !== priorityB) return priorityA - priorityB;
                 }
 
                 return indexA - indexB;
@@ -596,7 +592,6 @@
 
             cards.forEach(card => {
                 grid.appendChild(card);
-                
                 if (category === 'all' || card.dataset.category === category) {
                     card.classList.remove('hidden-card');
                     card.classList.add('visible-card');
